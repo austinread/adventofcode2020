@@ -3,7 +3,7 @@ import inputs
 raw = inputs.import_input(1)
 
 entries = raw.split("\n")
-entries = list(map(lambda e: int(e), entries))
+entries = [int(e) for e in entries]
 
 def match_two():
     for i1 in range(0, len(entries)-1):
@@ -20,5 +20,5 @@ def match_three():
                     return(entries[i1]*entries[i2]*entries[i3])
 
 
-print ("Solution 1A: " + str(match_two()))
-print ("Solution 1B: " + str(match_three()))
+print (f"Solution 1A: {str(match_two())}")
+print (f"Solution 1B: {str(match_three())}")

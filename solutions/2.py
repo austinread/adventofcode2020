@@ -3,7 +3,7 @@ import inputs
 raw = inputs.import_input(2)
 passwords_raw = raw.split("\n")
 
-class password:
+class Password:
     def __init__(self, raw):
         self.password = raw[raw.index(": ")+2:]
         self.key = raw[raw.index(":")-1]
@@ -13,7 +13,7 @@ class password:
 
 passwords = []
 for p in passwords_raw:
-    passwords.append(password(p))
+    passwords.append(Password(p))
 
 #key_a and key_b are the mininum and maxiumum appearances of the key
 def validate_v1():
@@ -35,5 +35,5 @@ def validate_v2():
 
     return correct_password_count
 
-print ("Solution 2A: " + str(validate_v1()))
-print ("Solution 2B: " + str (validate_v2()))
+print (f"Solution 2A: {str(validate_v1())}")
+print (f"Solution 2B: {str (validate_v2())}")
