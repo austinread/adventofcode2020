@@ -11,9 +11,7 @@ class Password:
         self.key_b = int(raw[raw.index("-")+1:raw.index(" ")])
 
 
-passwords = []
-for p in passwords_raw:
-    passwords.append(Password(p))
+passwords = [Password(p) for p in passwords_raw]
 
 #key_a and key_b are the mininum and maxiumum appearances of the key
 def validate_v1():
