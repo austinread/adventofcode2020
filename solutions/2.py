@@ -1,4 +1,4 @@
-import inputs
+from helpers import inputs
 
 raw = inputs.import_input(2)
 passwords_raw = raw.split("\n")

@@ -1,4 +1,4 @@
-import inputs
+from helpers import inputs
 
 raw = inputs.import_input(3)
 rows = raw.split("\n")
